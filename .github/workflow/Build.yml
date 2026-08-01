@@ -15,13 +15,14 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: '3.11'
+        python-version: '3.10'
 
     - name: Install dependencies
       run: |
         pip install buildozer
         sudo apt update
         sudo apt install -y git zip unzip openjdk-17-jdk
+        sudo apt install -y zlib1g-dev
 
     - name: Build APK
       run: |
